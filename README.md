@@ -13,7 +13,7 @@ SVG files are nothing but XML graphics files. We can generate SVG files for our 
 The Apache Batik is a sub-project of the Apache XMLGraphics project and has a built in SVGGenerator class ​https://xmlgraphics.apache.org/batik/using/svg-generator.html  
  On the Java platform, all rendering goes through the [Graphics2D](https://docs.oracle.com/javase/1.5.0/docs/api/java/awt/Graphics2D.html) abstract class, which offers methods such as drawRect, fillRect, and drawString. There are specialized implementations of this abstract class for each type of output, such as a screen or a printer. SVGGraphics2D is a new implementation of that interface that generates SVG content instead of drawing to a screen or a printer.
 
-In order to use this interface we first need to create a Graphics2D implementation of our chart which involves converting org.eclipse.swt.gc object to java.awt.Graphics2D 
+In order to use this interface we first need to create a Graphics2D implementation of our chart which involves converting _org.eclipse.swt.gc_ object to _java.awt.Graphics2D_ 
 
 PR for this change : https://github.com/eclipse/swtchart/pull/61
 
