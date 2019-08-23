@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+## About the project
 
-You can use the [editor on GitHub](https://github.com/mavrk/gsoc2019-final/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Eclipse SWTChart Project - Extending the export options
+Mentor - [Philip Wenig](https://github.com/eclipse/swtchart/commits?author=eselmeister)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+**Project Goals and deliverables**
+1. Add SVG export option
+2. Add PDF and EPS export option
 
-### Markdown
+## SVG Export
+SVG files are nothing but XML graphics files. We can generate SVG files for our charts using the [Apache XMLGraphics](https://xmlgraphics.apache.org/) project. This project has an open-source license and is already available under Eclipse Orbit.  
+ 
+The Apache Batik is a sub-project of the Apache XMLGraphics project and has a built in SVGGenerator class ​https://xmlgraphics.apache.org/batik/using/svg-generator.html  
+ On the Java platform, all rendering goes through the [Graphics2D](https://docs.oracle.com/javase/1.5.0/docs/api/java/awt/Graphics2D.html) abstract class, which offers methods such as drawRect, fillRect, and drawString. There are specialized implementations of this abstract class for each type of output, such as a screen or a printer. SVGGraphics2D is a new implementation of that interface that generates SVG content instead of drawing to a screen or a printer.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+In order to use this interface we first need to create a Graphics2D implementation of our chart which involves converting org.eclipse.swt.gc object to java.awt.Graphics2D 
 
-```markdown
-Syntax highlighted code block
+PR for this change : https://github.com/eclipse/swtchart/pull/61
 
-# Header 1
-## Header 2
-### Header 3
+Once we have created a Graphics2D object, we can use it to create our SVG file. 
 
-- Bulleted
-- List
+PR for this : https://github.com/eclipse/swtchart/pull/67
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mavrk/gsoc2019-final/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## EPS and PDF Export
+Exporting to EPS and PDF is not very straightforward like exporting to SVG. Though the Apache XMLGraphics project has an option to create EPS files, but the functionality is pretty basic. The other option is to create a SVG file and transcode it to EPS or PDF using Apache FOP. Unfortunately, Apache FOP is not a part of Eclipse Orbit and isn't supported out-of-the box like Apache Batik. The good news is that the EPSTranscoder and PDFTranscoder will be moved to the Transcoder package in Batik and in a future release, we can extend this functionality in SWTChart.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Sanatt Abrol
+sanattabrol@gmail.com
+https://github.com/mavrk
