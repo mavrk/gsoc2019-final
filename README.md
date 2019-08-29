@@ -33,8 +33,8 @@ Some sample exports:
 Exporting to EPS and PDF is not very straightforward like exporting to SVG. Though the Apache XMLGraphics project has an option to create EPS files, but the functionality is pretty basic. The other option is to create a SVG file and transcode it to EPS or PDF using Apache FOP. Unfortunately, Apache FOP is not a part of Eclipse Orbit and isn't supported out-of-the box like Apache Batik. The good news is that the EPSTranscoder and PDFTranscoder will be moved to the Transcoder package in Batik and in a future release, we can extend this functionality in SWTChart.
 
 Some sample exports:
-[PDF Export](https://github.com/mavrk/gsoc2019-final/master/scatter.pdf)
-[EPS Export](https://github.com/mavrk/gsoc2019-final/master/scatter.eps)
+[PDF Export](https://github.com/mavrk/gsoc2019-final/raw/master/scatter.pdf)
+[EPS Export](https://github.com/mavrk/gsoc2019-final/raw/master/scatter.eps)
 
 ### Support or Contact
 
