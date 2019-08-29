@@ -25,7 +25,7 @@ Once we have created a Graphics2D object, we can use it to create our SVG file.
 PR for this : https://github.com/eclipse/swtchart/pull/67
 
 Some sample exports: 
-<img src="./as.svg" height="370" width="950">
+<img src="./as.svg" height="380" width="950">
 <img src="./as2.svg" height="350" width="950">
 <img src="./as3.svg" height="550" width="950">
 
