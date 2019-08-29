@@ -25,9 +25,9 @@ Once we have created a Graphics2D object, we can use it to create our SVG file.
 PR for this : https://github.com/eclipse/swtchart/pull/67
 
 Some sample exports: 
-<img src="./as.svg" height="950" width="350">
-<img src="./as2.svg" height="950" width="350">
-<img src="./as3.svg" height="950" width="350">
+<img src="./as.svg" height="350" width="950">
+<img src="./as2.svg" height="350" width="950">
+<img src="./as3.svg" height="550" width="950">
 
 ## EPS and PDF Export
 Exporting to EPS and PDF is not very straightforward like exporting to SVG. Though the Apache XMLGraphics project has an option to create EPS files, but the functionality is pretty basic. The other option is to create a SVG file and transcode it to EPS or PDF using Apache FOP. Unfortunately, Apache FOP is not a part of Eclipse Orbit and isn't supported out-of-the box like Apache Batik. The good news is that the EPSTranscoder and PDFTranscoder will be moved to the Transcoder package in Batik and in a future release, we can extend this functionality in SWTChart.
