@@ -1,6 +1,8 @@
 ## About the project
 
-Eclipse SWTChart Project - Extending the export options
+**Eclipse SWTChart Project - Extending the export options**
+See Eclipse SWTChart on [Eclipse](https://projects.eclipse.org/projects/science.swtchart), [Github](https://github.com/eclipse/swtchart)
+See this project on [Google Summer of code](https://summerofcode.withgoogle.com/projects/#4820028082356224)
 Mentor - [Philip Wenig](https://github.com/eclipse/swtchart/commits?author=eselmeister)
 
 **Project Goals and deliverables**
@@ -21,11 +23,20 @@ Once we have created a Graphics2D object, we can use it to create our SVG file.
 
 PR for this : https://github.com/eclipse/swtchart/pull/67
 
+Some sample exports: 
+![SVG Export](https://raw.githubusercontent.com/mavrk/gsoc2019-final/master/as.svg)
+![SVG Export](https://raw.githubusercontent.com/mavrk/gsoc2019-final/master/as2.svg)
+![SVG Export](https://raw.githubusercontent.com/mavrk/gsoc2019-final/master/as3.svg)
+
 ## EPS and PDF Export
 Exporting to EPS and PDF is not very straightforward like exporting to SVG. Though the Apache XMLGraphics project has an option to create EPS files, but the functionality is pretty basic. The other option is to create a SVG file and transcode it to EPS or PDF using Apache FOP. Unfortunately, Apache FOP is not a part of Eclipse Orbit and isn't supported out-of-the box like Apache Batik. The good news is that the EPSTranscoder and PDFTranscoder will be moved to the Transcoder package in Batik and in a future release, we can extend this functionality in SWTChart.
+
+Some sample exports:
+![PDF Export](https://raw.githubusercontent.com/mavrk/gsoc2019-final/master/scatter.pdf)
+![EPS Export](https://raw.githubusercontent.com/mavrk/gsoc2019-final/master/scatter.eps)
 
 ### Support or Contact
 
 Sanatt Abrol
-sanattabrol@gmail.com
+sanatt.abrol.in@gmail.com
 https://github.com/mavrk
