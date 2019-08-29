@@ -26,6 +26,7 @@ PR for this : https://github.com/eclipse/swtchart/pull/67
 
 Some sample exports: 
 ![SVG Export](./as.svg)
+<img src="./as.svg">
 ![SVG Export](./as2.svg)
 ![SVG Export](./as3.svg)
 
