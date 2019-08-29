@@ -38,6 +38,6 @@ Some sample exports:
 
 ### Support or Contact
 
-Sanatt Abrol
-sanatt.abrol.in@gmail.com
+Sanatt Abrol <br>
+sanatt.abrol.in@gmail.com <br>
 https://github.com/mavrk
